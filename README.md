@@ -1,6 +1,6 @@
 # Real-time Object Detection Product Price
 
-_FYP Module_
+_IVE FYP 1920 Module_
 
 - [Real-time Object Detection Product Price](#real-time-object-detection-product-price)
   - [System Requirements](#system-requirements)
