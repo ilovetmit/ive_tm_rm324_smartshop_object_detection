@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ITP3905 Project">
+    <meta name="author" content="LiChakYin_180034644">
+
+    <title>Real-time Object Detection Product Price</title>
+    <link rel="icon" href="{{ url_for('static', filename='asset/image/favicon.ico') }}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='asset/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <style>
+        @media (min-width: 1300px) {
+            .container {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Smart Shop</a>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5">Real-time Object Detection Product</h1>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-lg-12 col-xl-12 mb-3">
+            <div class="card border-success">
+                <div class="card-header">
+                    Product Scanner
+                </div>
+                <div class="card-body text-center">
+                    <img class="img-fluid" src="{{ url_for('video_feed') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ url_for('static', filename='asset/vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='asset/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+item {
+    id: 1
+    name: 'lemon tea'
+}
+
+item {
+    id: 2
+    name: 'vitasoy m'
+}
+
+item {
+    id: 3
+    name: 'vitasoy'
+}
+
+item {
+    id: 4
+    name: 'cirtus lemon'
+}
+
+item {
+    id: 5
+    name: 'scented tea'
+}
+
+item {
+    id: 6
+    name: 'melon milk'
+}
+
+item {
+    id: 7
+    name: 'peach tea'
+}
+
+item {
+    id: 8
+    name: 'ice shock peach'
+}
+
+item {
+    id: 9
+    name: 'coca cola'
+}
+
+item {
+    id: 10
+    name: '7up'
+}
+
+item {
+    id: 11
+    name: 'pepsi'
+}
