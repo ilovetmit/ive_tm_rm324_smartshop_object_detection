@@ -11,6 +11,7 @@ import threading
 import argparse
 import datetime
 import imutils
+import requests
 import six
 import json
 import time
@@ -28,6 +29,9 @@ from utils import visualization_utils as vis_util
 
 product_data = []
 product_score_data = []
+product_json_data = []
+product_json_score_data = []
+json_time = 5
 
 # Name of the directory containing the object detection module we're using
 MODEL_NAME = 'inference_graph'
@@ -179,6 +183,19 @@ def load_object_data(
                     product_score = '%.2f' % (100 * scores[i])
             product_data.append(str(product_name))
             product_score_data.append(product_score)
+    print(product_data)
+    print(product_score_data)
+    product_json_data.append(product_data)
+    product_json_score_data.append(product_data)
+    if len(product_json_data)>json_time:
+        data = {
+            'product': product_json_data,
+            'product_score': product_json_score_data
+        }
+        headers = {'Content-Type': 'application/json'}
+        response = requests.post(url='url', headers=headers, data=json.dumps(data))
+        product_json_data.clear()
+        product_json_score_data.clear()
 
 
 def generate():

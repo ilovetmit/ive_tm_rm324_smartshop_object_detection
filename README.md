@@ -1,4 +1,4 @@
-# Real-time Object Detection Product Price
+# Real-time Object Detection Product
 
 _IVE FYP 1920 Module_
 
