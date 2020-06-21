@@ -10,7 +10,7 @@ _IVE FYP 1920 Module_
 ## System Requirements
 
 - Python 3.6
-- TensorFlow 1.14
+- TensorFlow 1.15
 - Flask
 - Pandas
 
@@ -22,6 +22,7 @@ _IVE FYP 1920 Module_
 
 3. install Python library
     ```shell script
+    pip install flask
     pip install Cython
     pip install contextlib2
     pip install pillow
@@ -29,7 +30,9 @@ _IVE FYP 1920 Module_
     pip install matplotlib
     pip install pandas
     pip install opencv-python
-    pip install tensorflow=1
+    pip install tensorflow=1.15
+    pip install imutils
+    pip install requests
     ```
 
 4. Add necessary environment variables
