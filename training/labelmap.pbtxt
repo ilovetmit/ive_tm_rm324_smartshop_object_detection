@@ -1,54 +1,29 @@
 item {
     id: 1
-    name: 'lemon tea'
+    name: '15'
 }
 
 item {
     id: 2
-    name: 'vitasoy m'
+    name: '24'
 }
 
 item {
     id: 3
-    name: 'vitasoy'
+    name: '25'
 }
 
 item {
     id: 4
-    name: 'cirtus lemon'
+    name: '26'
 }
 
 item {
     id: 5
-    name: 'scented tea'
+    name: '27'
 }
 
 item {
     id: 6
-    name: 'melon milk'
-}
-
-item {
-    id: 7
-    name: 'peach tea'
-}
-
-item {
-    id: 8
-    name: 'ice shock peach'
-}
-
-item {
-    id: 9
-    name: 'coca cola'
-}
-
-item {
-    id: 10
-    name: '7up'
-}
-
-item {
-    id: 11
-    name: 'pepsi'
+    name: '28'
 }

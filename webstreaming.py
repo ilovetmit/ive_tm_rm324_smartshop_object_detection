@@ -129,14 +129,14 @@ def detect_motion(frameCount):
             category_index,
             use_normalized_coordinates=True,
             line_thickness=6,
-            min_score_thresh=0.70)
+            min_score_thresh=0.80)
 
         load_object_data(
             np.squeeze(boxes),
             np.squeeze(classes).astype(np.int32),
             np.squeeze(scores),
             category_index,
-            min_score_thresh=0.70)
+            min_score_thresh=0.80)
 
         # grab the current timestamp and draw it on the frame
         timestamp = datetime.datetime.now()
