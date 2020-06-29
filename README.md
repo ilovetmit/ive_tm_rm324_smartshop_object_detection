@@ -8,6 +8,7 @@ IVE FYP 1920 Module
     - [Linux](#linux)
     - [Mac OS](#mac-os)
   - [Model Info](#model-info)
+    - [Total Loss](#total-loss)
 
 ## System Requirements
 
@@ -35,7 +36,7 @@ IVE FYP 1920 Module
     pip install matplotlib
     pip install pandas
     pip install opencv-python
-    pip install tensorflow=1.15
+    pip install tensorflow==1.15
     pip install imutils
     pip install requests
     ```
@@ -84,10 +85,34 @@ IVE FYP 1920 Module
     brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
     ```
 
-3. Create a virtual environment
+3. update openssl version
+
+    update openssl version to 1.0.2t fix pip3 ssl
+
+    > pip is configured with locations that require TLS/SSL, however the ssl module in ...
+
+    - check openssl version
 
     ```shell script
-    pip install --upgrade virtualenv
+    ls /usr/local/Cellar/openssl/
+    ```
+
+    - switch openssl version to 1.0.2t
+
+    ```shell script
+    brew switch openssl 1.0.2t
+    ```
+
+    - install openssl
+
+    ```shell script
+    brew install https://github.com/tebelorg/Tump/releases/download/v1.0.0/openssl.rb
+    ```
+
+4. Create a virtual environment
+
+    ```shell script
+    pip3 install --upgrade virtualenv
     virtualenv --system-site-packages -p python3 targetDirectory
     ```
 
@@ -98,25 +123,25 @@ IVE FYP 1920 Module
     source ./bin/activate
     ```
 
-4. `git clone https://github.com/tensorflow/models`
+5. `git clone https://github.com/tensorflow/models`
 
-5. install Python library
+6. install Python library
 
     ```shell script
-    pip install flask
-    pip install Cython
-    pip install contextlib2
-    pip install pillow
-    pip install lxml
-    pip install matplotlib
-    pip install pandas
-    pip install opencv-python
-    pip install tensorflow=1.15
-    pip install imutils
-    pip install requests
+    pip3 install flask
+    pip3 install Cython
+    pip3 install contextlib2
+    pip3 install pillow
+    pip3 install lxml
+    pip3 install matplotlib
+    pip3 install pandas
+    pip3 install opencv-python
+    pip3 install tensorflow==1.15
+    pip3 install imutils
+    pip3 install requests
     ```
 
-6. Install Google Protocol Buffers
+7. Install Google Protocol Buffers
 
     ```shell script
     PROTOC_ZIP=protoc-3.7.1-osx-x86_64.zip
@@ -126,22 +151,24 @@ IVE FYP 1920 Module
     rm -f $PROTOC_ZIP
     ```
 
-7. Compile Protobufs
+8. navigate to `models/research` and run:
+
+    8.1 Compile Protobufs
 
     ```shell script
     protoc object_detection/protos/*.proto --python_out=.
     ```
 
-8. navigate to `tensorflow/models/research` and run:
+    8.2 Protobufs build
 
     ```shell script
-    python setup.py build
-    python setup.py install
+    python3 setup.py build
+    python3 setup.py install
     ```
 
 9. navigate to this project folder
 
-10. run `python webstreaming.py --ip 127.0.0.1 --port 8000`
+10. run `python3 webstreaming.py --ip 127.0.0.1 --port 8000`
 
 11. enjoy [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
@@ -149,6 +176,10 @@ IVE FYP 1920 Module
 
 - Labeling data tools : [LabelImg](https://github.com/tzutalin/labelImg)
 - Training model:  [faster_rcnn_inception_v2_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md#coco-trained-models)
-- Dataset size: 313 photos
-- Training step: 20001
+- Dataset size: 318 photos
+- Training step: 33816
 - Number of products: 11
+
+### Total Loss
+
+![Total loss](./scalars/Losses_TotalLoss.svg)
