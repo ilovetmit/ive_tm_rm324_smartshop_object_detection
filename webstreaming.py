@@ -190,7 +190,7 @@ def load_object_data(
             'product': product_json_data,
         }
         headers = {'Content-Type': 'application/json'}
-        response = requests.post(url='http://huanxiang.codes/smart-shop/api/v1/object_detection', headers=headers,
+        response = requests.post(url='http://192.168.15.175/system/api/v1/object_detection', headers=headers,
                                  data=json.dumps(data))
         product_json_data.clear()
         print(response)
