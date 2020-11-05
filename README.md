@@ -1,6 +1,6 @@
 # Real-time Object Detection Product
 
-IVE FYP 1920 Module
+IVE TM RM324 Smart Shop 1920 Module
 
 - [Real-time Object Detection Product](#real-time-object-detection-product)
   - [System Requirements](#system-requirements)
