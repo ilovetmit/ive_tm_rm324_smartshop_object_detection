@@ -1,29 +1,29 @@
 item {
     id: 1
-    name: '15'
+    name: 'USB cable'
 }
 
 item {
     id: 2
-    name: '24'
+    name: 'brown box'
 }
 
 item {
     id: 3
-    name: '25'
+    name: 'white box'
 }
 
 item {
     id: 4
-    name: '26'
+    name: 'green bottle'
 }
 
 item {
     id: 5
-    name: '27'
+    name: 'brown bottle'
 }
 
 item {
     id: 6
-    name: '28'
+    name: 'green square bottle'
 }
